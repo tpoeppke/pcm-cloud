@@ -1,0 +1,16 @@
+
+*.class
+
+*.bin
+
+*.lock
+
+org\.palladiosimulator\.pcm\.cloud/\.gradle/buildOutputCleanup/
+
+org\.palladiosimulator\.pcm\.cloud/\.settings/
+
+org\.palladiosimulator\.pcm\.cloud/gradle/wrapper/
+
+org\.palladiosimulator\.pcm\.cloud/gradlew
+
+org\.palladiosimulator\.pcm\.cloud/gradlew\.bat

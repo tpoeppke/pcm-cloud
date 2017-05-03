@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+ Copyright 2005-2017 by palladiosimulator.org
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated resourceenvironmentcloud -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudModelWizardID"
+            name="%_UI_ResourceenvironmentcloudModelWizard_label"
+            class="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ResourceenvironmentcloudModelFile.gif">
+         <description>%_UI_ResourceenvironmentcloudModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated resourceenvironmentcloud -->
+      <editor
+            id="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudEditorID"
+            name="%_UI_ResourceenvironmentcloudEditor_label"
+            icon="icons/full/obj16/ResourceenvironmentcloudModelFile.gif"
+            extensions="resourceenvironmentcloud"
+            class="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudEditor"
+            contributorClass="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
