@@ -62,7 +62,7 @@ public class ResourceenvironmentcloudExample {
 			try {
 				Resource resource = resourceSet.createResource(URI.createURI("http:///My.resourceenvironmentcloud"));
 				ResourceContainerCloud root = ResourceenvironmentcloudFactory.eINSTANCE.createResourceContainerCloud();
-				resource.getContents().add(root);
+				resource.getContents().add((EObject)root);
 				resource.save(System.out, null);
 			}
 			catch (IOException exception) {

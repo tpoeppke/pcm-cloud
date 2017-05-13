@@ -57,7 +57,7 @@ public class ResourceenvironmentcloudFactoryImpl extends EFactoryImpl implements
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD: return createResourceContainerCloud();
+			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD: return (EObject)createResourceContainerCloud();
 			default:
 				throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}

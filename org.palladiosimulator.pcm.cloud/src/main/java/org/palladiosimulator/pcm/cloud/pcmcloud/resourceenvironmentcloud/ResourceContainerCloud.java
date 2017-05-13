@@ -3,8 +3,6 @@
  */
 package org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud;
 
-import org.eclipse.emf.ecore.EObject;
-
 import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPrivacy;
 
 /**
@@ -29,7 +27,7 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPri
  * @model
  * @generated
  */
-public interface ResourceContainerCloud extends EObject, ResourceContainerPrivacy {
+public interface ResourceContainerCloud extends ResourceContainerPrivacy {
 	/**
 	 * Returns the value of the '<em><b>Cloud Provider</b></em>' attribute.
 	 * <!-- begin-user-doc -->
