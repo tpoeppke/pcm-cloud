@@ -13,7 +13,8 @@
       disposableProviderFactory="true" contentTypeIdentifier="" fileExtensions="pcmcloud,resourceenvironment"
       ecorePackage="resourceenvironmentcloud.ecore#/" publicationLocation="">
     <nestedGenPackages prefix="Resourceenvironmentcloud" resource="XMI" disposableProviderFactory="true"
-        contentTypeIdentifier="" ecorePackage="resourceenvironmentcloud.ecore#//resourceenvironmentcloud">
+        contentTypeIdentifier="" fileExtensions="resourceenvironment,resourceenvironmentcloud"
+        ecorePackage="resourceenvironmentcloud.ecore#//resourceenvironmentcloud">
       <genClasses ecoreClass="resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud">
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/cloudProvider"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/location"/>

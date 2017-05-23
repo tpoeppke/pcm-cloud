@@ -60,7 +60,7 @@ public class ResourceenvironmentcloudExample {
 		if (args.length == 0) {
 			System.out.println("Enter a list of file paths or URIs that have content like this:");
 			try {
-				Resource resource = resourceSet.createResource(URI.createURI("http:///My.resourceenvironmentcloud"));
+				Resource resource = resourceSet.createResource(URI.createURI("http:///My.resourceenvironment"));
 				ResourceContainerCloud root = ResourceenvironmentcloudFactory.eINSTANCE.createResourceContainerCloud();
 				resource.getContents().add((EObject)root);
 				resource.save(System.out, null);

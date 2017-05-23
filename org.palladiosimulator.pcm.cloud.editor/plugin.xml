@@ -29,7 +29,7 @@
             id="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudEditorID"
             name="%_UI_ResourceenvironmentcloudEditor_label"
             icon="icons/full/obj16/ResourceenvironmentcloudModelFile.gif"
-            extensions="resourceenvironmentcloud"
+            extensions="resourceenvironment,resourceenvironmentcloud"
             class="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudEditor"
             contributorClass="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation.ResourceenvironmentcloudActionBarContributor">
       </editor>

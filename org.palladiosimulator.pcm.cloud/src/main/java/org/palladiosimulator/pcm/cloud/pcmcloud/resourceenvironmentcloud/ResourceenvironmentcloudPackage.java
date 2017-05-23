@@ -43,7 +43,7 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_URI = "http://iobserve.org/PalladioComponentModel/5.1/Cloud/ResourceEnvironment";
+	String eNS_URI = "http://palladiosimulator.org/PalladioComponentModel/5.1/Cloud/ResourceEnvironment";
 
 	/**
 	 * The package namespace name.
@@ -51,7 +51,7 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	String eNS_PREFIX = "org.iobserve";
+	String eNS_PREFIX = "org.palladiosimulator";
 
 	/**
 	 * The singleton instance of the package.
