@@ -18,13 +18,14 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.impl.ResourceContain
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getCloudProvider <em>Cloud Provider</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getCloudProviderName <em>Cloud Provider Name</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getExternalAddress <em>External Address</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getUsername <em>Username</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getPassword <em>Password</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getInstanceType <em>Instance Type</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getManagementAddress <em>Management Address</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getGroupName <em>Group Name</em>}</li>
  * </ul>
  *
  * @generated
@@ -54,8 +55,8 @@ public class ResourceContainerCloudImpl extends ResourceContainerPrivacyImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getCloudProvider() {
-		return (String)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER, true);
+	public String getCloudProviderName() {
+		return (String)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME, true);
 	}
 
 	/**
@@ -63,8 +64,8 @@ public class ResourceContainerCloudImpl extends ResourceContainerPrivacyImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setCloudProvider(String newCloudProvider) {
-		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER, newCloudProvider);
+	public void setCloudProviderName(String newCloudProviderName) {
+		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME, newCloudProviderName);
 	}
 
 	/**
@@ -173,6 +174,24 @@ public class ResourceContainerCloudImpl extends ResourceContainerPrivacyImpl imp
 	 */
 	public void setManagementAddress(String newManagementAddress) {
 		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__MANAGEMENT_ADDRESS, newManagementAddress);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String getGroupName() {
+		return (String)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__GROUP_NAME, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setGroupName(String newGroupName) {
+		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__GROUP_NAME, newGroupName);
 	}
 
 } //ResourceContainerCloudImpl

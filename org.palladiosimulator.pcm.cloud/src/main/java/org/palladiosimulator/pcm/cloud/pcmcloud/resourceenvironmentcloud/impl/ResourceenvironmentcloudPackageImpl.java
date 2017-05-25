@@ -110,7 +110,7 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceContainerCloud_CloudProvider() {
+	public EAttribute getResourceContainerCloud_CloudProviderName() {
 		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -173,6 +173,15 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getResourceContainerCloud_GroupName() {
+		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(7);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public ResourceenvironmentcloudFactory getResourceenvironmentcloudFactory() {
 		return (ResourceenvironmentcloudFactory)getEFactoryInstance();
 	}
@@ -197,13 +206,14 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 
 		// Create classes and their features
 		resourceContainerCloudEClass = createEClass(RESOURCE_CONTAINER_CLOUD);
-		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER);
+		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__LOCATION);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__EXTERNAL_ADDRESS);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__USERNAME);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__PASSWORD);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__MANAGEMENT_ADDRESS);
+		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__GROUP_NAME);
 	}
 
 	/**
@@ -241,13 +251,14 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(resourceContainerCloudEClass, ResourceContainerCloud.class, "ResourceContainerCloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResourceContainerCloud_CloudProvider(), ecorePackage.getEString(), "cloudProvider", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
+		initEAttribute(getResourceContainerCloud_CloudProviderName(), ecorePackage.getEString(), "cloudProviderName", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_Location(), ecorePackage.getEString(), "location", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_ExternalAddress(), ecorePackage.getEString(), "externalAddress", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_Username(), ecorePackage.getEString(), "username", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_Password(), ecorePackage.getEString(), "password", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_InstanceType(), ecorePackage.getEString(), "instanceType", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_ManagementAddress(), ecorePackage.getEString(), "managementAddress", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getResourceContainerCloud_GroupName(), ecorePackage.getEString(), "groupName", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

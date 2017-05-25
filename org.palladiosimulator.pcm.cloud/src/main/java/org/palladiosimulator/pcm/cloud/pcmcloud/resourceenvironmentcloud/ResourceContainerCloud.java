@@ -14,13 +14,14 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPri
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProvider <em>Cloud Provider</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProviderName <em>Cloud Provider Name</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getLocation <em>Location</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getExternalAddress <em>External Address</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getUsername <em>Username</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getPassword <em>Password</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType <em>Instance Type</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getManagementAddress <em>Management Address</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getGroupName <em>Group Name</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud()
@@ -29,30 +30,30 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPri
  */
 public interface ResourceContainerCloud extends ResourceContainerPrivacy {
 	/**
-	 * Returns the value of the '<em><b>Cloud Provider</b></em>' attribute.
+	 * Returns the value of the '<em><b>Cloud Provider Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Cloud Provider</em>' attribute isn't clear,
+	 * If the meaning of the '<em>Cloud Provider Name</em>' attribute isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cloud Provider</em>' attribute.
-	 * @see #setCloudProvider(String)
-	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud_CloudProvider()
+	 * @return the value of the '<em>Cloud Provider Name</em>' attribute.
+	 * @see #setCloudProviderName(String)
+	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud_CloudProviderName()
 	 * @model ordered="false"
 	 * @generated
 	 */
-	String getCloudProvider();
+	String getCloudProviderName();
 
 	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProvider <em>Cloud Provider</em>}' attribute.
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProviderName <em>Cloud Provider Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cloud Provider</em>' attribute.
-	 * @see #getCloudProvider()
+	 * @param value the new value of the '<em>Cloud Provider Name</em>' attribute.
+	 * @see #getCloudProviderName()
 	 * @generated
 	 */
-	void setCloudProvider(String value);
+	void setCloudProviderName(String value);
 
 	/**
 	 * Returns the value of the '<em><b>Location</b></em>' attribute.
@@ -209,5 +210,31 @@ public interface ResourceContainerCloud extends ResourceContainerPrivacy {
 	 * @generated
 	 */
 	void setManagementAddress(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Group Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Group Name</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Group Name</em>' attribute.
+	 * @see #setGroupName(String)
+	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud_GroupName()
+	 * @model
+	 * @generated
+	 */
+	String getGroupName();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getGroupName <em>Group Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Group Name</em>' attribute.
+	 * @see #getGroupName()
+	 * @generated
+	 */
+	void setGroupName(String value);
 
 } // ResourceContainerCloud

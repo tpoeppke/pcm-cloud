@@ -53,31 +53,32 @@ public class ResourceContainerCloudItemProvider extends ResourceContainerPrivacy
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addCloudProviderPropertyDescriptor(object);
+			addCloudProviderNamePropertyDescriptor(object);
 			addLocationPropertyDescriptor(object);
 			addExternalAddressPropertyDescriptor(object);
 			addUsernamePropertyDescriptor(object);
 			addPasswordPropertyDescriptor(object);
 			addInstanceTypePropertyDescriptor(object);
 			addManagementAddressPropertyDescriptor(object);
+			addGroupNamePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Cloud Provider feature.
+	 * This adds a property descriptor for the Cloud Provider Name feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addCloudProviderPropertyDescriptor(Object object) {
+	protected void addCloudProviderNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors.add
 			(createItemPropertyDescriptor
 				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
 				 getResourceLocator(),
-				 getString("_UI_ResourceContainerCloud_cloudProvider_feature"),
-				 getString("_UI_PropertyDescriptor_description", "_UI_ResourceContainerCloud_cloudProvider_feature", "_UI_ResourceContainerCloud_type"),
-				 ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER,
+				 getString("_UI_ResourceContainerCloud_cloudProviderName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResourceContainerCloud_cloudProviderName_feature", "_UI_ResourceContainerCloud_type"),
+				 ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME,
 				 true,
 				 false,
 				 false,
@@ -219,6 +220,28 @@ public class ResourceContainerCloudItemProvider extends ResourceContainerPrivacy
 	}
 
 	/**
+	 * This adds a property descriptor for the Group Name feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addGroupNamePropertyDescriptor(Object object) {
+		itemPropertyDescriptors.add
+			(createItemPropertyDescriptor
+				(((ComposeableAdapterFactory)adapterFactory).getRootAdapterFactory(),
+				 getResourceLocator(),
+				 getString("_UI_ResourceContainerCloud_groupName_feature"),
+				 getString("_UI_PropertyDescriptor_description", "_UI_ResourceContainerCloud_groupName_feature", "_UI_ResourceContainerCloud_type"),
+				 ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__GROUP_NAME,
+				 true,
+				 false,
+				 false,
+				 ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+				 null,
+				 null));
+	}
+
+	/**
 	 * This returns ResourceContainerCloud.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -256,13 +279,14 @@ public class ResourceContainerCloudItemProvider extends ResourceContainerPrivacy
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(ResourceContainerCloud.class)) {
-			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER:
+			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME:
 			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__LOCATION:
 			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__EXTERNAL_ADDRESS:
 			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__USERNAME:
 			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__PASSWORD:
 			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE:
 			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__MANAGEMENT_ADDRESS:
+			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD__GROUP_NAME:
 				fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 				return;
 		}

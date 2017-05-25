@@ -8,7 +8,7 @@
       <details key="documentation" value="Package of entities representing the execution environment of a component based software system. &#xA;Enhanced by special properties relevant for cloud computing environments."/>
     </eAnnotations>
     <eClassifiers xsi:type="ecore:EClass" name="ResourceContainerCloud" eSuperTypes="../../org.palladiosimulator.pcm.privacy/model/pcmprivacy.ecore#//resourceenvironmentprivacy/ResourceContainerPrivacy">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloudProvider" ordered="false"
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloudProviderName" ordered="false"
           eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -16,6 +16,7 @@
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="managementAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
