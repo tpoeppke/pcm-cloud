@@ -2,6 +2,7 @@
 <?eclipse version="3.0"?>
 
 <!--
+ Copyright 2005-2017 by palladiosimulator.org
 -->
 
 <plugin>
@@ -9,7 +10,7 @@
    <extension point="org.eclipse.emf.ecore.generated_package">
       <!-- @generated resourceenvironmentcloud -->
       <package
-            uri="http://palladiosimulator.org/PalladioComponentModel/5.1/Cloud/ResourceEnvironment"
+            uri="http://palladiosimulator.org/PalladioComponentModel/5.2/Cloud/ResourceEnvironment"
             class="org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage"
             genModel="model/resourceenvironmentcloud.genmodel"/>
    </extension>
