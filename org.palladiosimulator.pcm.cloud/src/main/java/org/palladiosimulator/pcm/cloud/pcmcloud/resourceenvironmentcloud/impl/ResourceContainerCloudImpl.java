@@ -5,6 +5,8 @@ package org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl;
 
 import org.eclipse.emf.ecore.EClass;
 
+import org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.VMType;
+
 import org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud;
 import org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage;
 
@@ -18,14 +20,12 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.impl.ResourceContain
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getCloudProviderName <em>Cloud Provider Name</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getLocation <em>Location</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getExternalAddress <em>External Address</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getUsername <em>Username</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getPassword <em>Password</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getInstanceType <em>Instance Type</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getManagementAddress <em>Management Address</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getGroupName <em>Group Name</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl.ResourceContainerCloudImpl#getInstanceType <em>Instance Type</em>}</li>
  * </ul>
  *
  * @generated
@@ -48,42 +48,6 @@ public class ResourceContainerCloudImpl extends ResourceContainerPrivacyImpl imp
 	@Override
 	protected EClass eStaticClass() {
 		return ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getCloudProviderName() {
-		return (String)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setCloudProviderName(String newCloudProviderName) {
-		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME, newCloudProviderName);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public String getLocation() {
-		return (String)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__LOCATION, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setLocation(String newLocation) {
-		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__LOCATION, newLocation);
 	}
 
 	/**
@@ -145,24 +109,6 @@ public class ResourceContainerCloudImpl extends ResourceContainerPrivacyImpl imp
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public String getInstanceType() {
-		return (String)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE, true);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public void setInstanceType(String newInstanceType) {
-		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE, newInstanceType);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
 	public String getManagementAddress() {
 		return (String)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__MANAGEMENT_ADDRESS, true);
 	}
@@ -192,6 +138,24 @@ public class ResourceContainerCloudImpl extends ResourceContainerPrivacyImpl imp
 	 */
 	public void setGroupName(String newGroupName) {
 		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__GROUP_NAME, newGroupName);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public VMType getInstanceType() {
+		return (VMType)eGet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE, true);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public void setInstanceType(VMType newInstanceType) {
+		eSet(ResourceenvironmentcloudPackage.Literals.RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE, newInstanceType);
 	}
 
 } //ResourceContainerCloudImpl

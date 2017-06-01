@@ -6,23 +6,50 @@
     modelPluginClass="" rootExtendsInterface="org.eclipse.emf.cdo.CDOObject" rootExtendsClass="org.eclipse.emf.internal.cdo.CDOObjectImpl"
     rootImplementsInterface="" reflectiveDelegation="true" testsDirectory="/org.palladiosimulator.pcm.cloud.tests/src/main/java"
     importerID="org.eclipse.emf.importer.ecore" featureDelegation="Reflective" complianceLevel="8.0"
-    copyrightFields="false" language="en" usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.pcm.privacy/model/pcmprivacy.genmodel#//pcmprivacy ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
+    copyrightFields="false" language="en" usedGenPackages="../../de.uka.ipd.sdq.identifier/model/identifier.genmodel#//identifier ../../org.palladiosimulator.pcm.privacyM/model/pcmprivacy.genmodel#//pcmprivacy ../../org.palladiosimulator.pcm/model/pcm.genmodel#//pcm ../../de.uka.ipd.sdq.probfunction/model/ProbabilityFunction.genmodel#//probfunction ../../de.uka.ipd.sdq.stoex/model/stoex.genmodel#//stoex ../../de.uka.ipd.sdq.units/model/Units.genmodel#//units"
     interfaceNamePattern="" classNamePattern="" importOrganizing="true">
   <foreignModel>resourceenvironmentcloud.ecore</foreignModel>
   <genPackages prefix="Pcmcloud" basePackage="org.palladiosimulator.pcm.cloud" resource="XMI"
-      disposableProviderFactory="true" contentTypeIdentifier="" fileExtensions="pcmcloud,resourceenvironment"
+      disposableProviderFactory="true" contentTypeIdentifier="" fileExtensions="pcmcloud,resourceenvironment,cloudprofile"
       ecorePackage="resourceenvironmentcloud.ecore#/" publicationLocation="">
     <nestedGenPackages prefix="Resourceenvironmentcloud" resource="XMI" disposableProviderFactory="true"
         contentTypeIdentifier="" fileExtensions="resourceenvironment,resourceenvironmentcloud"
         ecorePackage="resourceenvironmentcloud.ecore#//resourceenvironmentcloud">
       <genClasses ecoreClass="resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud">
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/cloudProvider"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/location"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/externalAddress"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/username"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/password"/>
-        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/instanceType"/>
         <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/managementAddress"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/groupName"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EReference resourceenvironmentcloud.ecore#//resourceenvironmentcloud/ResourceContainerCloud/instanceType"/>
+      </genClasses>
+    </nestedGenPackages>
+    <nestedGenPackages prefix="Cloudprofile" resource="XMI" disposableProviderFactory="true"
+        ecorePackage="resourceenvironmentcloud.ecore#//cloudprofile">
+      <genClasses ecoreClass="resourceenvironmentcloud.ecore#//cloudprofile/CloudProfile">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resourceenvironmentcloud.ecore#//cloudprofile/CloudProfile/cloudProviders"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/CloudProfile/name"/>
+      </genClasses>
+      <genClasses ecoreClass="resourceenvironmentcloud.ecore#//cloudprofile/CloudProvider">
+        <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference resourceenvironmentcloud.ecore#//cloudprofile/CloudProvider/cloudResources"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/CloudProvider/name"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/CloudProvider/identity"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/CloudProvider/credential"/>
+      </genClasses>
+      <genClasses image="false" ecoreClass="resourceenvironmentcloud.ecore#//cloudprofile/CloudResourceType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/CloudResourceType/pricePerHour"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/CloudResourceType/location"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/CloudResourceType/name"/>
+        <genFeatures notify="false" createChild="false" propertySortChoices="true"
+            ecoreFeature="ecore:EReference resourceenvironmentcloud.ecore#//cloudprofile/CloudResourceType/provider"/>
+      </genClasses>
+      <genClasses ecoreClass="resourceenvironmentcloud.ecore#//cloudprofile/VMType">
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/VMType/maxCores"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/VMType/minCores"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/VMType/minRAM"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/VMType/maxRAM"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/VMType/minProcessingRate"/>
+        <genFeatures createChild="false" ecoreFeature="ecore:EAttribute resourceenvironmentcloud.ecore#//cloudprofile/VMType/maxProcessingRate"/>
       </genClasses>
     </nestedGenPackages>
   </genPackages>

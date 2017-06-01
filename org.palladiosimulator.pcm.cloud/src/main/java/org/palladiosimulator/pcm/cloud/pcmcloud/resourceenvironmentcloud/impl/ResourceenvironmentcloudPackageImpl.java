@@ -6,8 +6,13 @@ package org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.impl;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.eclipse.emf.ecore.impl.EPackageImpl;
+
+import org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.CloudprofilePackage;
+
+import org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.impl.CloudprofilePackageImpl;
 
 import org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud;
 import org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudFactory;
@@ -81,11 +86,16 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 		ResourceenvironmentPrivacyPackage.eINSTANCE.eClass();
 		CompositionPrivacyPackage.eINSTANCE.eClass();
 
+		// Obtain or create and register interdependencies
+		CloudprofilePackageImpl theCloudprofilePackage = (CloudprofilePackageImpl)(EPackage.Registry.INSTANCE.getEPackage(CloudprofilePackage.eNS_URI) instanceof CloudprofilePackageImpl ? EPackage.Registry.INSTANCE.getEPackage(CloudprofilePackage.eNS_URI) : CloudprofilePackage.eINSTANCE);
+
 		// Create package meta-data objects
 		theResourceenvironmentcloudPackage.createPackageContents();
+		theCloudprofilePackage.createPackageContents();
 
 		// Initialize created meta-data
 		theResourceenvironmentcloudPackage.initializePackageContents();
+		theCloudprofilePackage.initializePackageContents();
 
 		// Mark meta-data to indicate it can't be changed
 		theResourceenvironmentcloudPackage.freeze();
@@ -110,7 +120,7 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceContainerCloud_CloudProviderName() {
+	public EAttribute getResourceContainerCloud_ExternalAddress() {
 		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(0);
 	}
 
@@ -119,7 +129,7 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceContainerCloud_Location() {
+	public EAttribute getResourceContainerCloud_Username() {
 		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(1);
 	}
 
@@ -128,7 +138,7 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceContainerCloud_ExternalAddress() {
+	public EAttribute getResourceContainerCloud_Password() {
 		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(2);
 	}
 
@@ -137,7 +147,7 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceContainerCloud_Username() {
+	public EAttribute getResourceContainerCloud_ManagementAddress() {
 		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(3);
 	}
 
@@ -146,7 +156,7 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceContainerCloud_Password() {
+	public EAttribute getResourceContainerCloud_GroupName() {
 		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(4);
 	}
 
@@ -155,26 +165,8 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EAttribute getResourceContainerCloud_InstanceType() {
-		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(5);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResourceContainerCloud_ManagementAddress() {
-		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(6);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public EAttribute getResourceContainerCloud_GroupName() {
-		return (EAttribute)resourceContainerCloudEClass.getEStructuralFeatures().get(7);
+	public EReference getResourceContainerCloud_InstanceType() {
+		return (EReference)resourceContainerCloudEClass.getEStructuralFeatures().get(5);
 	}
 
 	/**
@@ -206,14 +198,12 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 
 		// Create classes and their features
 		resourceContainerCloudEClass = createEClass(RESOURCE_CONTAINER_CLOUD);
-		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME);
-		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__LOCATION);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__EXTERNAL_ADDRESS);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__USERNAME);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__PASSWORD);
-		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__MANAGEMENT_ADDRESS);
 		createEAttribute(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__GROUP_NAME);
+		createEReference(resourceContainerCloudEClass, RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE);
 	}
 
 	/**
@@ -241,6 +231,7 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 
 		// Obtain other dependent packages
 		ResourceenvironmentPrivacyPackage theResourceenvironmentPrivacyPackage = (ResourceenvironmentPrivacyPackage)EPackage.Registry.INSTANCE.getEPackage(ResourceenvironmentPrivacyPackage.eNS_URI);
+		CloudprofilePackage theCloudprofilePackage = (CloudprofilePackage)EPackage.Registry.INSTANCE.getEPackage(CloudprofilePackage.eNS_URI);
 
 		// Create type parameters
 
@@ -251,14 +242,12 @@ public class ResourceenvironmentcloudPackageImpl extends EPackageImpl implements
 
 		// Initialize classes and features; add operations and parameters
 		initEClass(resourceContainerCloudEClass, ResourceContainerCloud.class, "ResourceContainerCloud", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-		initEAttribute(getResourceContainerCloud_CloudProviderName(), ecorePackage.getEString(), "cloudProviderName", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, !IS_ORDERED);
-		initEAttribute(getResourceContainerCloud_Location(), ecorePackage.getEString(), "location", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_ExternalAddress(), ecorePackage.getEString(), "externalAddress", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_Username(), ecorePackage.getEString(), "username", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_Password(), ecorePackage.getEString(), "password", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-		initEAttribute(getResourceContainerCloud_InstanceType(), ecorePackage.getEString(), "instanceType", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_ManagementAddress(), ecorePackage.getEString(), "managementAddress", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 		initEAttribute(getResourceContainerCloud_GroupName(), ecorePackage.getEString(), "groupName", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getResourceContainerCloud_InstanceType(), theCloudprofilePackage.getVMType(), null, "instanceType", null, 0, 1, ResourceContainerCloud.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

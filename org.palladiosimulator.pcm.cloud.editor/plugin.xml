@@ -35,4 +35,32 @@
       </editor>
    </extension>
 
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated resourceenvironmentcloud -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.presentation.CloudprofileModelWizardID"
+            name="%_UI_CloudprofileModelWizard_label"
+            class="org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.presentation.CloudprofileModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/CloudprofileModelFile.gif">
+         <description>%_UI_CloudprofileModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated resourceenvironmentcloud -->
+      <editor
+            id="org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.presentation.CloudprofileEditorID"
+            name="%_UI_CloudprofileEditor_label"
+            icon="icons/full/obj16/CloudprofileModelFile.gif"
+            extensions="cloudprofile"
+            class="org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.presentation.CloudprofileEditor"
+            contributorClass="org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.presentation.CloudprofileActionBarContributor">
+      </editor>
+   </extension>
+
 </plugin>

@@ -8,7 +8,8 @@ Bundle-Activator: org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcl
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation
+Export-Package: org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.presentation,
+ org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.presentation
 Require-Bundle: org.eclipse.core.runtime,
  org.eclipse.core.resources;visibility:=reexport,
  org.palladiosimulator.pcm.cloud.edit;visibility:=reexport,

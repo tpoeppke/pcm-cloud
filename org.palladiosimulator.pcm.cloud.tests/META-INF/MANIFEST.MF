@@ -7,7 +7,8 @@ Bundle-ClassPath: .
 Bundle-Vendor: %providerName
 Bundle-Localization: plugin
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
-Export-Package: org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.tests
+Export-Package: org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.tests,
+ org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.tests
 Require-Bundle: org.eclipse.core.runtime,
  org.palladiosimulator.pcm.cloud;visibility:=reexport,
  de.uka.ipd.sdq.identifier;visibility:=reexport,

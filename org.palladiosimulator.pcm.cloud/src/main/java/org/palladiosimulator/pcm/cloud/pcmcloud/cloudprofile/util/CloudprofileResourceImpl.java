@@ -1,7 +1,7 @@
 /**
  * Copyright 2005-2017 by palladiosimulator.org
  */
-package org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.util;
+package org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.util;
 
 import org.eclipse.emf.common.util.URI;
 
@@ -11,10 +11,10 @@ import org.eclipse.emf.ecore.xmi.impl.XMIResourceImpl;
  * <!-- begin-user-doc -->
  * The <b>Resource </b> associated with the package.
  * <!-- end-user-doc -->
- * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.util.ResourceenvironmentcloudResourceFactoryImpl
+ * @see org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.util.CloudprofileResourceFactoryImpl
  * @generated
  */
-public class ResourceenvironmentcloudResourceImpl extends XMIResourceImpl {
+public class CloudprofileResourceImpl extends XMIResourceImpl {
 	/**
 	 * Creates an instance of the resource.
 	 * <!-- begin-user-doc -->
@@ -22,8 +22,8 @@ public class ResourceenvironmentcloudResourceImpl extends XMIResourceImpl {
 	 * @param uri the URI of the new resource.
 	 * @generated
 	 */
-	public ResourceenvironmentcloudResourceImpl(URI uri) {
+	public CloudprofileResourceImpl(URI uri) {
 		super(uri);
 	}
 
-} //ResourceenvironmentcloudResourceImpl
+} //CloudprofileResourceImpl

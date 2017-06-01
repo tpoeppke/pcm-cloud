@@ -169,6 +169,8 @@ import org.eclipse.ui.actions.WorkspaceModifyOperation;
 
 import org.palladiosimulator.pcm.allocation.provider.AllocationItemProviderAdapterFactory;
 
+import org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.provider.CloudprofileItemProviderAdapterFactory;
+
 import org.palladiosimulator.pcm.compositionprivacy.provider.CompositionPrivacyItemProviderAdapterFactory;
 
 import org.palladiosimulator.pcm.core.composition.provider.CompositionItemProviderAdapterFactory;
@@ -755,6 +757,7 @@ public class ResourceenvironmentcloudEditor
 
 		adapterFactory.addAdapterFactory(new ResourceItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ResourceenvironmentcloudItemProviderAdapterFactory());
+		adapterFactory.addAdapterFactory(new CloudprofileItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new IdentifierItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new ResourceenvironmentPrivacyItemProviderAdapterFactory());
 		adapterFactory.addAdapterFactory(new CompositionPrivacyItemProviderAdapterFactory());

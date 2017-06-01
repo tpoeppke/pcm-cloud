@@ -6,6 +6,7 @@ package org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud;
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.EPackage;
+import org.eclipse.emf.ecore.EReference;
 
 import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceenvironmentPrivacyPackage;
 
@@ -144,31 +145,13 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	int RESOURCE_CONTAINER_CLOUD__GEOLOCATION = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY__GEOLOCATION;
 
 	/**
-	 * The feature id for the '<em><b>Cloud Provider Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 0;
-
-	/**
-	 * The feature id for the '<em><b>Location</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CONTAINER_CLOUD__LOCATION = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 1;
-
-	/**
 	 * The feature id for the '<em><b>External Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONTAINER_CLOUD__EXTERNAL_ADDRESS = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 2;
+	int RESOURCE_CONTAINER_CLOUD__EXTERNAL_ADDRESS = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Username</b></em>' attribute.
@@ -177,7 +160,7 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONTAINER_CLOUD__USERNAME = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 3;
+	int RESOURCE_CONTAINER_CLOUD__USERNAME = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 1;
 
 	/**
 	 * The feature id for the '<em><b>Password</b></em>' attribute.
@@ -186,16 +169,7 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONTAINER_CLOUD__PASSWORD = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 4;
-
-	/**
-	 * The feature id for the '<em><b>Instance Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 5;
+	int RESOURCE_CONTAINER_CLOUD__PASSWORD = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 2;
 
 	/**
 	 * The feature id for the '<em><b>Management Address</b></em>' attribute.
@@ -204,7 +178,7 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONTAINER_CLOUD__MANAGEMENT_ADDRESS = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 6;
+	int RESOURCE_CONTAINER_CLOUD__MANAGEMENT_ADDRESS = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 3;
 
 	/**
 	 * The feature id for the '<em><b>Group Name</b></em>' attribute.
@@ -213,7 +187,16 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONTAINER_CLOUD__GROUP_NAME = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 7;
+	int RESOURCE_CONTAINER_CLOUD__GROUP_NAME = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 4;
+
+	/**
+	 * The feature id for the '<em><b>Instance Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 5;
 
 	/**
 	 * The number of structural features of the '<em>Resource Container Cloud</em>' class.
@@ -222,7 +205,7 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int RESOURCE_CONTAINER_CLOUD_FEATURE_COUNT = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 8;
+	int RESOURCE_CONTAINER_CLOUD_FEATURE_COUNT = ResourceenvironmentPrivacyPackage.RESOURCE_CONTAINER_PRIVACY_FEATURE_COUNT + 6;
 
 
 	/**
@@ -234,28 +217,6 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getResourceContainerCloud();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProviderName <em>Cloud Provider Name</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Cloud Provider Name</em>'.
-	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProviderName()
-	 * @see #getResourceContainerCloud()
-	 * @generated
-	 */
-	EAttribute getResourceContainerCloud_CloudProviderName();
-
-	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getLocation <em>Location</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Location</em>'.
-	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getLocation()
-	 * @see #getResourceContainerCloud()
-	 * @generated
-	 */
-	EAttribute getResourceContainerCloud_Location();
 
 	/**
 	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getExternalAddress <em>External Address</em>}'.
@@ -291,17 +252,6 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	EAttribute getResourceContainerCloud_Password();
 
 	/**
-	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType <em>Instance Type</em>}'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return the meta object for the attribute '<em>Instance Type</em>'.
-	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType()
-	 * @see #getResourceContainerCloud()
-	 * @generated
-	 */
-	EAttribute getResourceContainerCloud_InstanceType();
-
-	/**
 	 * Returns the meta object for the attribute '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getManagementAddress <em>Management Address</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -322,6 +272,17 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 	 * @generated
 	 */
 	EAttribute getResourceContainerCloud_GroupName();
+
+	/**
+	 * Returns the meta object for the reference '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType <em>Instance Type</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the reference '<em>Instance Type</em>'.
+	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType()
+	 * @see #getResourceContainerCloud()
+	 * @generated
+	 */
+	EReference getResourceContainerCloud_InstanceType();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -356,22 +317,6 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 		EClass RESOURCE_CONTAINER_CLOUD = eINSTANCE.getResourceContainerCloud();
 
 		/**
-		 * The meta object literal for the '<em><b>Cloud Provider Name</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE_CONTAINER_CLOUD__CLOUD_PROVIDER_NAME = eINSTANCE.getResourceContainerCloud_CloudProviderName();
-
-		/**
-		 * The meta object literal for the '<em><b>Location</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE_CONTAINER_CLOUD__LOCATION = eINSTANCE.getResourceContainerCloud_Location();
-
-		/**
 		 * The meta object literal for the '<em><b>External Address</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -396,14 +341,6 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 		EAttribute RESOURCE_CONTAINER_CLOUD__PASSWORD = eINSTANCE.getResourceContainerCloud_Password();
 
 		/**
-		 * The meta object literal for the '<em><b>Instance Type</b></em>' attribute feature.
-		 * <!-- begin-user-doc -->
-		 * <!-- end-user-doc -->
-		 * @generated
-		 */
-		EAttribute RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE = eINSTANCE.getResourceContainerCloud_InstanceType();
-
-		/**
 		 * The meta object literal for the '<em><b>Management Address</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -418,6 +355,14 @@ public interface ResourceenvironmentcloudPackage extends EPackage {
 		 * @generated
 		 */
 		EAttribute RESOURCE_CONTAINER_CLOUD__GROUP_NAME = eINSTANCE.getResourceContainerCloud_GroupName();
+
+		/**
+		 * The meta object literal for the '<em><b>Instance Type</b></em>' reference feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RESOURCE_CONTAINER_CLOUD__INSTANCE_TYPE = eINSTANCE.getResourceContainerCloud_InstanceType();
 
 	}
 

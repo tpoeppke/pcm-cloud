@@ -1,23 +1,14 @@
 /**
  * Copyright 2005-2017 by palladiosimulator.org
  */
-package org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.util;
-
-import de.uka.ipd.sdq.identifier.Identifier;
+package org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.util;
 
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
 import org.eclipse.emf.ecore.util.Switch;
 
-import org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.*;
-
-import org.palladiosimulator.pcm.core.entity.Entity;
-import org.palladiosimulator.pcm.core.entity.NamedElement;
-
-import org.palladiosimulator.pcm.resourceenvironment.ResourceContainer;
-
-import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPrivacy;
+import org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.*;
 
 /**
  * <!-- begin-user-doc -->
@@ -29,17 +20,17 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPri
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage
+ * @see org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.CloudprofilePackage
  * @generated
  */
-public class ResourceenvironmentcloudSwitch<T> extends Switch<T> {
+public class CloudprofileSwitch<T> extends Switch<T> {
 	/**
 	 * The cached model package
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ResourceenvironmentcloudPackage modelPackage;
+	protected static CloudprofilePackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -47,9 +38,9 @@ public class ResourceenvironmentcloudSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ResourceenvironmentcloudSwitch() {
+	public CloudprofileSwitch() {
 		if (modelPackage == null) {
-			modelPackage = ResourceenvironmentcloudPackage.eINSTANCE;
+			modelPackage = CloudprofilePackage.eINSTANCE;
 		}
 	}
 
@@ -76,14 +67,28 @@ public class ResourceenvironmentcloudSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-			case ResourceenvironmentcloudPackage.RESOURCE_CONTAINER_CLOUD: {
-				ResourceContainerCloud resourceContainerCloud = (ResourceContainerCloud)theEObject;
-				T result = caseResourceContainerCloud(resourceContainerCloud);
-				if (result == null) result = caseResourceContainerPrivacy(resourceContainerCloud);
-				if (result == null) result = caseResourceContainer(resourceContainerCloud);
-				if (result == null) result = caseEntity(resourceContainerCloud);
-				if (result == null) result = caseIdentifier(resourceContainerCloud);
-				if (result == null) result = caseNamedElement(resourceContainerCloud);
+			case CloudprofilePackage.CLOUD_PROFILE: {
+				CloudProfile cloudProfile = (CloudProfile)theEObject;
+				T result = caseCloudProfile(cloudProfile);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CloudprofilePackage.CLOUD_PROVIDER: {
+				CloudProvider cloudProvider = (CloudProvider)theEObject;
+				T result = caseCloudProvider(cloudProvider);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CloudprofilePackage.CLOUD_RESOURCE_TYPE: {
+				CloudResourceType cloudResourceType = (CloudResourceType)theEObject;
+				T result = caseCloudResourceType(cloudResourceType);
+				if (result == null) result = defaultCase(theEObject);
+				return result;
+			}
+			case CloudprofilePackage.VM_TYPE: {
+				VMType vmType = (VMType)theEObject;
+				T result = caseVMType(vmType);
+				if (result == null) result = caseCloudResourceType(vmType);
 				if (result == null) result = defaultCase(theEObject);
 				return result;
 			}
@@ -92,92 +97,62 @@ public class ResourceenvironmentcloudSwitch<T> extends Switch<T> {
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Container Cloud</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Profile</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Container Cloud</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Profile</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseResourceContainerCloud(ResourceContainerCloud object) {
+	public T caseCloudProfile(CloudProfile object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Provider</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Identifier</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Provider</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseIdentifier(Identifier object) {
+	public T caseCloudProvider(CloudProvider object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>Cloud Resource Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Named Element</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>Cloud Resource Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseNamedElement(NamedElement object) {
+	public T caseCloudResourceType(CloudResourceType object) {
 		return null;
 	}
 
 	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * Returns the result of interpreting the object as an instance of '<em>VM Type</em>'.
 	 * <!-- begin-user-doc -->
 	 * This implementation returns null;
 	 * returning a non-null result will terminate the switch.
 	 * <!-- end-user-doc -->
 	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Entity</em>'.
+	 * @return the result of interpreting the object as an instance of '<em>VM Type</em>'.
 	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
 	 * @generated
 	 */
-	public T caseEntity(Entity object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Container</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Container</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResourceContainer(ResourceContainer object) {
-		return null;
-	}
-
-	/**
-	 * Returns the result of interpreting the object as an instance of '<em>Resource Container Privacy</em>'.
-	 * <!-- begin-user-doc -->
-	 * This implementation returns null;
-	 * returning a non-null result will terminate the switch.
-	 * <!-- end-user-doc -->
-	 * @param object the target of the switch.
-	 * @return the result of interpreting the object as an instance of '<em>Resource Container Privacy</em>'.
-	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-	 * @generated
-	 */
-	public T caseResourceContainerPrivacy(ResourceContainerPrivacy object) {
+	public T caseVMType(VMType object) {
 		return null;
 	}
 
@@ -197,4 +172,4 @@ public class ResourceenvironmentcloudSwitch<T> extends Switch<T> {
 		return null;
 	}
 
-} //ResourceenvironmentcloudSwitch
+} //CloudprofileSwitch

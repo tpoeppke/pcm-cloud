@@ -3,6 +3,8 @@
  */
 package org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud;
 
+import org.palladiosimulator.pcm.cloud.pcmcloud.cloudprofile.VMType;
+
 import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPrivacy;
 
 /**
@@ -14,14 +16,12 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPri
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProviderName <em>Cloud Provider Name</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getLocation <em>Location</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getExternalAddress <em>External Address</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getUsername <em>Username</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getPassword <em>Password</em>}</li>
- *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType <em>Instance Type</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getManagementAddress <em>Management Address</em>}</li>
  *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getGroupName <em>Group Name</em>}</li>
+ *   <li>{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType <em>Instance Type</em>}</li>
  * </ul>
  *
  * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud()
@@ -29,58 +29,6 @@ import org.palladiosimulator.pcm.resourceenvironmentprivacy.ResourceContainerPri
  * @generated
  */
 public interface ResourceContainerCloud extends ResourceContainerPrivacy {
-	/**
-	 * Returns the value of the '<em><b>Cloud Provider Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Cloud Provider Name</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Cloud Provider Name</em>' attribute.
-	 * @see #setCloudProviderName(String)
-	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud_CloudProviderName()
-	 * @model ordered="false"
-	 * @generated
-	 */
-	String getCloudProviderName();
-
-	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getCloudProviderName <em>Cloud Provider Name</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Cloud Provider Name</em>' attribute.
-	 * @see #getCloudProviderName()
-	 * @generated
-	 */
-	void setCloudProviderName(String value);
-
-	/**
-	 * Returns the value of the '<em><b>Location</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Location</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Location</em>' attribute.
-	 * @see #setLocation(String)
-	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud_Location()
-	 * @model
-	 * @generated
-	 */
-	String getLocation();
-
-	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getLocation <em>Location</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Location</em>' attribute.
-	 * @see #getLocation()
-	 * @generated
-	 */
-	void setLocation(String value);
-
 	/**
 	 * Returns the value of the '<em><b>External Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -160,32 +108,6 @@ public interface ResourceContainerCloud extends ResourceContainerPrivacy {
 	void setPassword(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Instance Type</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <p>
-	 * If the meaning of the '<em>Instance Type</em>' attribute isn't clear,
-	 * there really should be more of a description here...
-	 * </p>
-	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Instance Type</em>' attribute.
-	 * @see #setInstanceType(String)
-	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud_InstanceType()
-	 * @model
-	 * @generated
-	 */
-	String getInstanceType();
-
-	/**
-	 * Sets the value of the '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType <em>Instance Type</em>}' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Instance Type</em>' attribute.
-	 * @see #getInstanceType()
-	 * @generated
-	 */
-	void setInstanceType(String value);
-
-	/**
 	 * Returns the value of the '<em><b>Management Address</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -236,5 +158,31 @@ public interface ResourceContainerCloud extends ResourceContainerPrivacy {
 	 * @generated
 	 */
 	void setGroupName(String value);
+
+	/**
+	 * Returns the value of the '<em><b>Instance Type</b></em>' reference.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Instance Type</em>' reference isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Instance Type</em>' reference.
+	 * @see #setInstanceType(VMType)
+	 * @see org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceenvironmentcloudPackage#getResourceContainerCloud_InstanceType()
+	 * @model
+	 * @generated
+	 */
+	VMType getInstanceType();
+
+	/**
+	 * Sets the value of the '{@link org.palladiosimulator.pcm.cloud.pcmcloud.resourceenvironmentcloud.ResourceContainerCloud#getInstanceType <em>Instance Type</em>}' reference.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Instance Type</em>' reference.
+	 * @see #getInstanceType()
+	 * @generated
+	 */
+	void setInstanceType(VMType value);
 
 } // ResourceContainerCloud

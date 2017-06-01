@@ -7,16 +7,51 @@
     <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
       <details key="documentation" value="Package of entities representing the execution environment of a component based software system. &#xA;Enhanced by special properties relevant for cloud computing environments."/>
     </eAnnotations>
-    <eClassifiers xsi:type="ecore:EClass" name="ResourceContainerCloud" eSuperTypes="../../org.palladiosimulator.pcm.privacy/model/pcmprivacy.ecore#//resourceenvironmentprivacy/ResourceContainerPrivacy">
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="cloudProviderName" ordered="false"
-          eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eClassifiers xsi:type="ecore:EClass" name="ResourceContainerCloud" eSuperTypes="../../org.palladiosimulator.pcm.privacyM/model/pcmprivacy.ecore#//resourceenvironmentprivacy/ResourceContainerPrivacy">
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="externalAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="username" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="password" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-      <eStructuralFeatures xsi:type="ecore:EAttribute" name="instanceType" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="managementAddress" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
       <eStructuralFeatures xsi:type="ecore:EAttribute" name="groupName" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="instanceType" eType="#//cloudprofile/VMType"/>
+    </eClassifiers>
+  </eSubpackages>
+  <eSubpackages name="cloudprofile" nsURI="http://palladiosimulator.org/PalladioComponentModel/5.2/CloudProfile"
+      nsPrefix="org.palladiosimulator">
+    <eAnnotations source="http://www.eclipse.org/emf/2002/GenModel">
+      <details key="documentation" value="Package of entities representing a cloud provider and it's offered services."/>
+    </eAnnotations>
+    <eClassifiers xsi:type="ecore:EClass" name="CloudProfile">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cloudProviders" upperBound="-1"
+          eType="#//cloudprofile/CloudProvider" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CloudProvider">
+      <eStructuralFeatures xsi:type="ecore:EReference" name="cloudResources" upperBound="-1"
+          eType="#//cloudprofile/CloudResourceType" containment="true"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="identity" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="credential" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="CloudResourceType" abstract="true">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="pricePerHour" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="location" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"
+          defaultValueLiteral="-1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+      <eStructuralFeatures xsi:type="ecore:EReference" name="provider" lowerBound="1"
+          eType="#//cloudprofile/CloudProvider"/>
+    </eClassifiers>
+    <eClassifiers xsi:type="ecore:EClass" name="VMType" eSuperTypes="#//cloudprofile/CloudResourceType">
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxCores" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minCores" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"
+          defaultValueLiteral="-1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minRAM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+          defaultValueLiteral="-1"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxRAM" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="minProcessingRate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+          defaultValueLiteral="0.0"/>
+      <eStructuralFeatures xsi:type="ecore:EAttribute" name="maxProcessingRate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"
+          defaultValueLiteral="0.0"/>
     </eClassifiers>
   </eSubpackages>
 </ecore:EPackage>
